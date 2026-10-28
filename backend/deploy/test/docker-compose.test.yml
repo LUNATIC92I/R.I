@@ -1,0 +1,37 @@
+# TEST SERVER - synthetic data only. Started by ./start-test-server.sh, which generates .env.
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: aic
+      POSTGRES_USER: aic
+      POSTGRES_PASSWORD: ${AIC_TEST_DB_PASSWORD:?run start-test-server.sh}
+    volumes: ["aic_test_pg:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aic -d aic"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  init:
+    build: ../..
+    env_file: .env
+    environment:
+      AIC_DATABASE_URL: postgresql+psycopg://aic:${AIC_TEST_DB_PASSWORD}@db:5432/aic
+    command: ["sh", "-c", "alembic upgrade head && python -m app.cli seed-demo --password \"$$AIC_DEMO_PASSWORD\""]
+    depends_on:
+      db: {condition: service_healthy}
+    restart: "no"
+
+  api:
+    build: ../..
+    env_file: .env
+    environment:
+      AIC_DATABASE_URL: postgresql+psycopg://aic:${AIC_TEST_DB_PASSWORD}@db:5432/aic
+    # Listens on this computer only; the phone reaches it through `adb reverse`.
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      init: {condition: service_completed_successfully}
+
+volumes:
+  aic_test_pg: {}

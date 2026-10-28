@@ -28,3 +28,4 @@ mobile/lib/l10n/app_localizations*.dart
 *.aab
 *.ipa
 mobile/android/build/
+mobile/android/.kotlin/
