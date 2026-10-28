@@ -1,0 +1,30 @@
+# Secrets and local configuration: never commit
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+key.properties
+secrets/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.pytest-aic.db
+.venv/
+.ruff_cache/
+
+# Flutter / build outputs
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/lib/l10n/app_localizations*.dart
+*.apk
+*.aab
+*.ipa
+mobile/android/build/

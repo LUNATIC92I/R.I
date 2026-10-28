@@ -1,0 +1,20 @@
+# Risques résiduels et contrôles restant à valider
+
+| # | Risque / limite | Mesure actuelle | Action requise avant production |
+|---|---|---|---|
+| R1 | Aucune revue de sécurité indépendante ni test d'intrusion n'ont été réalisés. | Tests automatisés de sécurité (isolation, IDOR, jetons, audit). | Audit de code, test d'intrusion API et mobile, revue cryptographique par un tiers qualifié. |
+| R2 | `AIC_MASTER_KEY` fournie par l'environnement : un accès root au serveur API permet de déchiffrer. | Dérivation HKDF, enveloppe par document, rotation par `key_id`. | Implémenter `KeyProvider` sur HSM ou KMS souverain ; séparer les rôles de détention des clés. |
+| R3 | Limitation de débit en mémoire, valable pour une seule instance. | Limites par IP, identifiant et utilisateur. | Backend partagé (Redis) et limitation au niveau du reverse proxy/WAF. |
+| R4 | WebAuthn/FIDO2 natif non implémenté dans l'API. | Délégué à l'IdP OIDC (claim `amr`). | Configurer l'IdP institutionnel avec clés physiques ; ou ajouter un module WebAuthn. |
+| R5 | OIDC, MISP, LLM institutionnel et push FCM/APNs : connecteurs écrits mais non testés contre de vrais services. | Validation stricte (HTTPS, signature, nonce), désactivés par défaut. | Tests d'intégration en préproduction avec les services réels. |
+| R6 | Détection root/jailbreak heuristique et contournable. | Signal remonté et affiché, jamais présenté comme fiable. | Play Integrity / App Attest, MDM, politique d'accès conditionnel. |
+| R7 | Épinglage de certificat non configuré (empreintes propres au déploiement). | HTTPS obligatoire, CA système uniquement. | Ajouter `<pin-set>` Android et l'équivalent iOS avec les SPKI de l'institution et une clé de secours. |
+| R8 | Un administrateur de base disposant des droits propriétaire peut réécrire toute la chaîne d'audit. | Chaîne de hachage, rôle applicatif sans UPDATE/DELETE, trigger. | Ancrage externe périodique de la tête de chaîne (WORM, SIEM, horodatage qualifié). |
+| R9 | Horodatage fourni par l'horloge du serveur. | UTC, NTP supposé. | NTP authentifié ; horodatage qualifié si exigé par la loi. |
+| R10 | Recherche par `ILIKE` : performance limitée sur de grands volumes ; pas de recherche dans le contenu chiffré des documents. | Filtrage d'autorisation en SQL. | Index trigramme PostgreSQL ou moteur interne (OpenSearch) indexant uniquement des métadonnées autorisées, avec filtrage par dossier. |
+| R11 | Les champs texte des dossiers (résumés, énoncés) ne sont pas chiffrés au niveau applicatif. | Chiffrement des volumes et des sauvegardes requis. | Chiffrement TDE/volume, sauvegardes chiffrées, éventuellement chiffrement applicatif des champs les plus sensibles. |
+| R12 | Les fichiers téléchargés sur mobile restent dans l'espace privé de l'application jusqu'à la déconnexion ; pas de visionneuse intégrée. | Effacement à la déconnexion, révocation, purge manuelle. | Visionneuse intégrée sans écriture disque, ou chiffrement de ces fichiers par la clé de cache. |
+| R13 | Le moteur de l'assistant est extractif et simple ; il peut manquer des dates ou contradictions. | Avertissement systématique, références aux éléments sources. | Évaluation sur corpus représentatifs synthétiques ; formation des analystes. |
+| R14 | Les compatibilités Android/iOS sur appareils physiques, l'accessibilité (lecteurs d'écran) et les performances à grande échelle n'ont pas été testées. | Tests unitaires et widgets, sémantique sur les éléments clés. | Campagne de tests sur parc d'appareils, audit d'accessibilité, tests de charge. |
+| R15 | La nomenclature de classification et les règles de conservation fournies sont des exemples. | Tables configurables. | Paramétrage par l'institution selon le droit national ; validation juridique. |
+| R16 | Conformité juridique (protection des données, procédure, contrôle parlementaire ou juridictionnel) non évaluée. | Base légale obligatoire par dossier, traçabilité. | Analyse d'impact relative à la protection des données et validation par les autorités compétentes. |

@@ -1,0 +1,542 @@
+{
+  "@@locale": "fr",
+  "accessLevel": "{level, select, read{Lecture} write{Lecture et écriture} other{{level}}}",
+  "@accessLevel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "accessLevelTitle": "Niveau d'accès",
+  "accuracyMeters": "Précision estimée (mètres)",
+  "activeCases": "Dossiers actifs accessibles",
+  "addEvent": "Ajouter un événement",
+  "addIndicator": "Ajouter un indicateur",
+  "addOsint": "Enregistrer une source ouverte",
+  "addSource": "Ajouter une source",
+  "addStatement": "Ajouter un élément",
+  "adminSeparationNotice": "L'administration technique ne donne aucun accès au contenu des dossiers opérationnels.",
+  "administration": "Administration",
+  "alertCenter": "Centre des alertes",
+  "alertNotice": "Une alerte est un signal à vérifier, jamais une preuve ni une décision.",
+  "alertStatus": "{status, select, new{Nouvelle} under_review{En vérification} dismissed{Écartée} escalated{Transmise} other{{status}}}",
+  "@alertStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "alerts": "Alertes",
+  "alertsToVerify": "Alertes à vérifier",
+  "all": "tous",
+  "alternativeHypotheses": "Hypothèses alternatives",
+  "analysisContext": "Contexte de l'analyse",
+  "analysisLabel": "Analyse argumentée",
+  "analyst": "Analyste",
+  "analyticalItems": "Faits et hypothèses",
+  "approve": "Valider",
+  "approveDeletion": "Approuver la suppression",
+  "approveDeletionConfirm": "La suppression est définitive. Elle reste tracée dans le journal d'audit.",
+  "archiveCase": "Archiver",
+  "archivedContent": "Contenu archivé (texte)",
+  "assessmentLevel": "{level, select, signal{Signal technique} anomaly{Anomalie} actionable_intelligence{Renseignement exploitable} confirmed_threat{Menace confirmée} other{{level}}}",
+  "@assessmentLevel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "assessmentLevelTitle": "Niveau d'évaluation",
+  "assessments": "Évaluations",
+  "assistantVerification": "Aide à la vérification",
+  "attachDocument": "Joindre un document",
+  "auditLog": "Journal d'audit",
+  "author": "Auteur ou organisme",
+  "authorisedFollowUp": "Mesures de suivi légalement autorisées",
+  "authorisedFollowUpHelp": "Uniquement les mesures couvertes par une base juridique.",
+  "basis": "Fondement",
+  "biometricExplanation": "La biométrie est vérifiée par le système de l'appareil. Aucune donnée biométrique n'est transmise.",
+  "biometricFailed": "Déverrouillage non effectué.",
+  "biometricLock": "Verrouillage biométrique",
+  "biometricLockDetail": "La session se verrouille après {minutes} minutes en arrière plan.",
+  "@biometricLockDetail": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "biometricReason": "Déverrouiller votre session protégée",
+  "biometricUnlock": "Déverrouiller",
+  "cancel": "Annuler",
+  "caseCreated": "Dossier créé",
+  "caseStatus": "{status, select, open{Ouvert} under_review{En révision} closed{Clos} archived{Archivé} pending_deletion{Suppression demandée} other{{status}}}",
+  "@caseStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "caseTitle": "Titre du dossier",
+  "cases": "Dossiers",
+  "category": "Catégorie",
+  "categoryLabel": "{category, select, terrorism_organised_violence{Terrorisme et violences organisées} organised_crime{Criminalité organisée} illicit_trafficking{Trafics illicites} critical_infrastructure{Infrastructures critiques} cyber_threat_public_institutions{Cybermenaces institutions publiques} foreign_interference{Ingérence étrangère} physical_threat_sensitive_sites{Menaces sur sites sensibles} security_crisis_destabilisation{Crises et déstabilisation} administrative_inquiry{Enquête administrative} other{Autre}}",
+  "@categoryLabel": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryNotice": "La catégorie organise l'information. Elle ne qualifie jamais une personne.",
+  "chainBroken": "Intégrité rompue à partir de l'entrée {seq}",
+  "@chainBroken": {
+    "placeholders": {
+      "seq": {
+        "type": "String"
+      }
+    }
+  },
+  "chainValid": "Chaîne d'audit intègre ({count} entrées)",
+  "@chainValid": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "checkingIntegrity": "Vérification de l'appareil et de la session",
+  "chronology": "Chronologie",
+  "classification": "Classification",
+  "classificationLevel": "Niveau de classification {rank}",
+  "@classificationLevel": {
+    "placeholders": {
+      "rank": {
+        "type": "int"
+      }
+    }
+  },
+  "clearance": "Habilitation",
+  "close": "Fermer",
+  "closeCase": "Clore",
+  "coOccurrences": "Rapprochements à analyser",
+  "colleague": "Agent",
+  "collectedOn": "Collecté le",
+  "confidence": "Confiance",
+  "confidenceLabel": "{level, select, low{faible} moderate{modérée} high{élevée} other{{level}}}",
+  "@confidenceLabel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "confirm": "Confirmer",
+  "confirmThreat": "Confirmer la menace",
+  "content": "Contenu",
+  "context": "Contexte",
+  "contradictingElements": "Éléments contradictoires",
+  "contradictions": "Contradictions",
+  "copy": "Copier",
+  "create": "Créer",
+  "credibility": "Crédibilité",
+  "credibilityLabel": "{level, select, 1{1 Confirmée} 2{2 Probablement vraie} 3{3 Possiblement vraie} 4{4 Douteuse} 5{5 Improbable} 6{6 Non évaluable} other{{level}}}",
+  "@credibilityLabel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "crossCase": "entre dossiers autorisés",
+  "cyber": "Cyberrenseignement",
+  "cyberNotice": "Une réputation ancienne ou un signal isolé ne suffit jamais à qualifier un indicateur de malveillant.",
+  "dashboard": "Tableau de bord",
+  "datePrecision": "{precision, select, exact{exacte} day{au jour} month{au mois} year{à l'année} other{inconnue}}",
+  "@datePrecision": {
+    "placeholders": {
+      "precision": {
+        "type": "String"
+      }
+    }
+  },
+  "description": "Description",
+  "deviceRevokedDone": "Appareil révoqué. Toutes ses sessions sont fermées.",
+  "deviceRevokedNotice": "Cet appareil a été révoqué ou une session a été fermée à distance. Les données locales ont été effacées.",
+  "deviceRiskWarning": "Signal de modification du système détecté (root ou jailbreak). Cette détection n'est pas infaillible ; la politique de l'institution peut restreindre l'accès.",
+  "deviceStatus": "{status, select, active{Actif} revoked{Révoqué} lost{Déclaré perdu} stolen{Déclaré volé} other{{status}}}",
+  "@deviceStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "devices": "Appareils",
+  "disableAccount": "Désactiver le compte",
+  "disabled": "désactivé",
+  "documentedRelations": "Relations documentées",
+  "documents": "Documents",
+  "done": "Effectué",
+  "download": "Télécharger",
+  "downloadOffline": "Rendre disponible hors connexion",
+  "downloadedPrivately": "Fichier enregistré dans l'espace protégé de l'application ({bytes} octets). Il sera effacé à la déconnexion.",
+  "@downloadedPrivately": {
+    "placeholders": {
+      "bytes": {
+        "type": "int"
+      }
+    }
+  },
+  "duplicatesFound": "{count} doublon(s) potentiel(s) détecté(s)",
+  "@duplicatesFound": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "editSummary": "Modifier la synthèse",
+  "emptyList": "Aucun élément à afficher",
+  "enableAccount": "Réactiver le compte",
+  "english": "English",
+  "enrich": "Enrichir",
+  "epistemicNotice": "Chaque élément porte son statut : fait confirmé, information non vérifiée, déclaration ou hypothèse. Un fait n'est confirmé que par une personne autre que son auteur, avec une source.",
+  "errorConflict": "Élément modifié entre temps. Rechargez puis recommencez.",
+  "errorForbidden": "Vous n'êtes pas autorisé à effectuer cette action.",
+  "errorGeneric": "Une erreur est survenue.",
+  "errorNetwork": "Réseau indisponible.",
+  "errorNotFound": "Introuvable ou non accessible.",
+  "errorRateLimited": "Trop de tentatives. Patientez avant de réessayer.",
+  "errorStepUp": "Une nouvelle authentification est requise.",
+  "errorValidation": "Saisie refusée ({code}).",
+  "@errorValidation": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "eventDate": "Date de l'événement",
+  "executiveSummary": "Résumé exécutif",
+  "fieldRequired": "Champ obligatoire",
+  "filterTitle": "Filtrer par titre ou référence",
+  "firstSeen": "Première observation",
+  "french": "Français",
+  "freshness": "{state, select, active{actif} stale{ancien} expired{expiré} other{{state}}}",
+  "@freshness": {
+    "placeholders": {
+      "state": {
+        "type": "String"
+      }
+    }
+  },
+  "genericNotifications": "Notifications génériques",
+  "genericNotificationsDetail": "Les notifications ne révèlent jamais de contenu, même sur l'écran verrouillé.",
+  "grantAccess": "Accorder un accès",
+  "graph": "Graphe des relations",
+  "history": "Historique des consultations et modifications",
+  "humanValidationNotice": "La diffusion exige la validation d'une autre personne habilitée. Le document ne justifie à lui seul aucune mesure coercitive.",
+  "independentSources": "Sources indépendantes",
+  "indicatorFreshness": "Fraîcheur des indicateurs",
+  "informationGaps": "Lacunes identifiées",
+  "integritySignal": "signal d'intégrité",
+  "jurisdiction": "Juridiction",
+  "justification": "Justification",
+  "kind": "Nature",
+  "language": "Langue",
+  "lastAssessed": "Dernière évaluation",
+  "lastSeen": "Dernière observation",
+  "lastUpdate": "Dernière modification",
+  "lastUsed": "Dernière utilisation",
+  "latitude": "Latitude",
+  "legalBasis": "Base juridique",
+  "legalBasisHelp": "Texte et article autorisant le traitement.",
+  "levelNotice": "Une menace confirmée ne peut être déclarée que par un superviseur, après recoupement.",
+  "lifecycle": "Cycle de vie",
+  "loading": "Chargement",
+  "locationLabel": "Lieu",
+  "locationPrecision": "{precision, select, exact{Localisation exacte} approximate{Localisation approximative} region{Zone ou région} other{Localisation inconnue}}",
+  "@locationPrecision": {
+    "placeholders": {
+      "precision": {
+        "type": "String"
+      }
+    }
+  },
+  "locationPrecisionTitle": "Précision de la localisation",
+  "locationProvenance": "Provenance des coordonnées",
+  "locked": "Session verrouillée",
+  "loginFailed": "Authentification refusée. Vérifiez vos identifiants.",
+  "logout": "Se déconnecter",
+  "logoutConfirm": "La session sera fermée et les données locales effacées.",
+  "longitude": "Longitude",
+  "lostDeviceNotice": "En cas de perte ou de vol, déclarez l'appareil : ses sessions sont fermées immédiatement et ses autorisations hors ligne révoquées. Prévenez aussi votre service de sécurité.",
+  "map": "Cartographie",
+  "members": "Accès",
+  "mfaCode": "Code à 6 chiffres",
+  "mfaEnrollPrompt": "Ajoutez ce compte dans l'application d'authentification fournie par votre institution avec la clé ci dessous.",
+  "mfaEnrollTitle": "Enrôlement du second facteur",
+  "mfaFailed": "Code refusé.",
+  "mfaPrompt": "Saisissez le code affiché par votre application d'authentification.",
+  "mfaSecretLabel": "Clé de configuration",
+  "mfaTitle": "Vérification multifacteur",
+  "more": "Plus",
+  "needToKnowNotice": "Accès accordé au titre du besoin d'en connaître, avec justification et échéance. Chaque attribution est tracée.",
+  "newAssessment": "Nouvelle évaluation",
+  "newCase": "Nouveau dossier",
+  "newReport": "Nouveau rapport",
+  "noAlerts": "Aucune alerte",
+  "noCases": "Aucun dossier accessible",
+  "noExpiry": "Sans échéance",
+  "noResults": "Aucun résultat dans votre périmètre",
+  "noSource": "Sans source",
+  "noTileServer": "Aucun serveur cartographique institutionnel configuré : seuls les points sont affichés.",
+  "none": "Aucune",
+  "noteRequired": "Une note de vérification est requise.",
+  "notificationText": "{category, select, case_activity{Nouvelle activité dans votre espace de travail} report_validation{Un élément attend votre validation} report_decision{Une décision a été enregistrée} alert{Un nouvel élément requiert une vérification} security{Information de sécurité sur votre compte} access_granted{Vos accès ont été mis à jour} other{Notification}}",
+  "@notificationText": {
+    "placeholders": {
+      "category": {
+        "type": "String"
+      }
+    }
+  },
+  "notifications": "Notifications",
+  "observedFacts": "Faits observés",
+  "offlineAuthorised": "Consultation hors connexion autorisée",
+  "offlineCopyNotice": "Copie hors connexion chiffrée et limitée dans le temps. Les opérations sensibles restent indisponibles.",
+  "offlineData": "Données hors connexion",
+  "offlineExpires": "Disponible hors connexion jusqu'au {date}",
+  "@offlineExpires": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "offlinePolicyHelp": "Selon la politique de classification. Les documents ne sont jamais inclus.",
+  "offlineQueued": "Hors connexion : opération mise en file, elle sera vérifiée par le serveur à la reconnexion.",
+  "onePerLine": "Un élément par ligne",
+  "openedOn": "Ouverte le",
+  "osint": "Sources ouvertes",
+  "osintLast30": "{count} éléments collectés sur 30 jours",
+  "@osintLast30": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "osintLegalNotice": "Uniquement des ressources publiques et légalement accessibles. Aucun accès à des comptes privés ni contournement de protection.",
+  "osintNotice": "Les sources ouvertes peuvent être inexactes ou manipulées. Distinguez date de publication, de collecte et de l'événement.",
+  "overview": "Synthèse",
+  "password": "Mot de passe",
+  "pendingOperations": "{count} opération(s) en attente de synchronisation",
+  "@pendingOperations": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "pickCase": "Choisir un dossier",
+  "possibleConsequences": "Conséquences possibles",
+  "prefillNotice": "Le projet est prérempli avec les éléments du dossier et leurs références.",
+  "previousVersion": "Version précédente du document",
+  "priority": "Priorité",
+  "priorityLabel": "{priority, select, low{Basse} medium{Moyenne} high{Haute} critical{Critique} other{{priority}}}",
+  "@priorityLabel": {
+    "placeholders": {
+      "priority": {
+        "type": "String"
+      }
+    }
+  },
+  "profile": "Profil et sessions",
+  "protectedReference": "Référence du registre des sources",
+  "protectedSourceNotice": "L'identité d'une source humaine n'est jamais saisie ici : utilisez uniquement la référence du registre protégé.",
+  "provenance": "Provenance",
+  "publicationContext": "Contexte de publication",
+  "publishedOn": "Publié le",
+  "purgeLocalData": "Effacer les données locales",
+  "purgeLocalDataDetail": "Supprime les copies hors connexion, la file d'attente et les fichiers téléchargés.",
+  "recentActivity": "Dossiers modifiés sur 7 jours",
+  "recentEvents": "Événements récents",
+  "recommendations": "Recommandations",
+  "recommendedVerifications": "Vérifications recommandées",
+  "recovery": "Récupération de compte",
+  "recoveryCode": "Code de récupération",
+  "recoveryHint": "Accès perdu : adressez vous à votre service de sécurité. La récupération suit une procédure institutionnelle vérifiée par deux personnes.",
+  "recoveryProcedureNotice": "Une demande est ouverte par un administrateur après vérification d'identité ; elle est approuvée par une autre personne habilitée.",
+  "referenceSite": "Site de référence",
+  "refresh": "Actualiser",
+  "registeredOn": "enregistré le",
+  "reject": "Refuser",
+  "rejectionReason": "Motif du refus",
+  "reliability": "Fiabilité",
+  "reliabilityDistribution": "Fiabilité des sources",
+  "reliabilityLabel": "{grade, select, A{A Totalement fiable} B{B Habituellement fiable} C{C Assez fiable} D{D Habituellement peu fiable} E{E Non fiable} other{F Non évaluable}}",
+  "@reliabilityLabel": {
+    "placeholders": {
+      "grade": {
+        "type": "String"
+      }
+    }
+  },
+  "reopenCase": "Rouvrir",
+  "reportLost": "Déclarer perdu",
+  "reportStatus": "{status, select, draft{Brouillon} submitted{Soumis} approved{Validé} rejected{Refusé} disseminated{Diffusé} other{{status}}}",
+  "@reportStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "reportType": "{type, select, intelligence_note{Note de renseignement} daily_summary{Synthèse quotidienne} situation_report{Rapport de situation} threat_assessment{Évaluation de menace} incident_report{Rapport d'incident} analytical_chronology{Chronologie analytique} strategic_watch_note{Note de veille stratégique} executive_briefing{Briefing exécutif} case_closure_report{Rapport de clôture} other{{type}}}",
+  "@reportType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "reports": "Rapports",
+  "reportsPending": "Rapports à valider",
+  "requestDeletion": "Demander la suppression",
+  "resultType": "{type, select, case{Dossier} statement{Élément} event{Événement} document{Document} report{Rapport} osint{Source ouverte} indicator{Indicateur} other{{type}}}",
+  "@resultType": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "retentionRule": "Règle de conservation",
+  "retry": "Réessayer",
+  "reviewDate": "Date de révision",
+  "reviewDueSoon": "Dossiers proches de leur révision",
+  "reviewNote": "Note de vérification",
+  "reviewOn": "Révision {date}",
+  "@reviewOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "revoke": "Révoquer",
+  "revokeAllSessions": "Fermer toutes les sessions",
+  "revokeSessionConfirm": "Cette session sera fermée immédiatement.",
+  "revoked": "Révoquée",
+  "rolesPermissions": "Rôles et permissions",
+  "save": "Enregistrer",
+  "saved": "Enregistré",
+  "screenProtection": "Protection de l'écran",
+  "screenProtectionDetail": "Captures d'écran bloquées sur Android et contenu masqué dans les applications récentes.",
+  "search": "Recherche",
+  "searchHint": "Rechercher dans votre périmètre autorisé",
+  "searchScopeNotice": "La recherche ne porte que sur les dossiers et niveaux auxquels vous avez accès.",
+  "securitySettings": "Paramètres de sécurité",
+  "servicesStatus": "État des services techniques",
+  "sessionExpired": "Session expirée. Reconnectez vous.",
+  "sessions": "Sessions",
+  "signIn": "Se connecter",
+  "signInSubtitle": "Accès réservé aux agents habilités.",
+  "signInTitle": "Authentification",
+  "signOutAndSignIn": "Se reconnecter avec ses identifiants",
+  "signingIn": "Connexion",
+  "source": "Source",
+  "sourceKind": "{kind, select, open_source{Source ouverte} institutional_system{Système institutionnel} official_report{Rapport officiel} human_protected{Source humaine protégée} technical{Source technique} other{Autre}}",
+  "@sourceKind": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "sourceLinked": "Source rattachée",
+  "sourceName": "Source originale",
+  "sourceQuality": "Qualité et fraîcheur des sources",
+  "sources": "Sources",
+  "sourcesReferenced": "{count} source(s) référencée(s)",
+  "@sourcesReferenced": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statementKind": "{kind, select, confirmed_fact{Faits confirmés} unverified_information{Informations non vérifiées} claim{Déclarations} working_hypothesis{Hypothèses de travail} alternative_hypothesis{Hypothèses alternatives} other{{kind}}}",
+  "@statementKind": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "status": "Statut",
+  "stepUpFailed": "Réauthentification refusée.",
+  "stepUpPrompt": "Cette opération sensible exige de confirmer votre identité.",
+  "stepUpTitle": "Réauthentification",
+  "submitForValidation": "Soumettre à validation",
+  "submitReview": "Passer en révision",
+  "summaryLabel": "Synthèse",
+  "syncNow": "Synchroniser maintenant",
+  "syncResult": "{total} opération(s) traitée(s), {rejected} refusée(s) ou en conflit",
+  "@syncResult": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      },
+      "rejected": {
+        "type": "int"
+      }
+    }
+  },
+  "threatStudied": "Menace étudiée",
+  "threatTrend": "Évolution des catégories documentées",
+  "timeline": "Chronologie analytique",
+  "title": "Titre",
+  "uncertainties": "Incertitudes",
+  "uncertainty": "Incertitude",
+  "uncertaintyLabel": "{level, select, low{faible} moderate{modérée} high{élevée} very_high{très élevée} other{{level}}}",
+  "@uncertaintyLabel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "undated": "Non daté",
+  "unknownClient": "Client inconnu",
+  "unlockAccount": "Déverrouiller le compte",
+  "until": "Jusqu'au",
+  "unverifiedPoints": "Éléments restant à confirmer",
+  "url": "Adresse de la ressource",
+  "username": "Identifiant",
+  "users": "Utilisateurs",
+  "value": "Valeur",
+  "verdict": "{verdict, select, unassessed{non évalué} suspicious{suspect} malicious_confirmed{malveillant confirmé} benign{bénin} false_positive{faux positif} other{{verdict}}}",
+  "@verdict": {
+    "placeholders": {
+      "verdict": {
+        "type": "String"
+      }
+    }
+  },
+  "verificationQuestions": "Questions de vérification",
+  "verifiedByHuman": "Vérifié par une autre personne",
+  "verifiedPoints": "Éléments vérifiés",
+  "verify": "Vérifier",
+  "verifyFact": "Confirmer comme fait",
+  "verifyIntegrity": "Vérifier l'intégrité",
+  "verifyNeedsSource": "Ajoutez d'abord une source au dossier.",
+  "verifyNotice": "Vous attestez avoir vérifié cet élément au moyen de la source choisie.",
+  "version": "Version"
+}

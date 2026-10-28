@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- HTTPS only, system CAs only (user-installed CAs are not trusted).
+     For certificate pinning, add a <pin-set> with the institution's SPKI hashes
+     (see docs/SECURITY.md); it is not set here because the hashes are deployment specific. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>

@@ -1,0 +1,17 @@
+[project]
+name = "aic-backend"
+version = "0.1.0"
+description = "AFRICAN INTELLIGENCE CORE backend API"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "B", "S", "I", "UP"]
+ignore = ["E501", "B008", "S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106", "S603", "S607", "S311"]
+"migrations/*" = ["UP", "I"]
