@@ -30,7 +30,7 @@ Couverture fonctionnelle des tests : authentification (MFA obligatoire, anti-rej
 
 ### APK
 
-Plusieurs tentatives ont échoué à cause de Maven Central répondant `HTTP 429 Too Many Requests` lors du téléchargement des dépendances Gradle (limite de débit amont, pas une erreur du projet). Une nouvelle tentative via le miroir Google de Maven Central est en cours ; ce document sera mis à jour avec le résultat réel. **Aucun APK n'est fourni tant que ce résultat n'est pas consigné ici.**
+`flutter build apk --release --dart-define=AIC_API_BASE_URL=https://api.aic.invalid/api/v1` : **réussi** (`app-release.apk`, 58,8 Mo, SHA-256 `9ecda484a7145ad841d66023874b9a45d0ec2e90a7f851d3ebd2adad8c9f435d`). Les premières tentatives avaient échoué sur `HTTP 429` de Maven Central ; la compilation a abouti en redirigeant, sur la machine de build uniquement, Maven Central vers le miroir Google (`maven-central.storage-download.googleapis.com`). L'APK est signé avec la **clé de debug** (pas de `key.properties`) : usage de test interne uniquement. Il pointe vers une URL volontairement non résoluble ; recompiler avec l'URL de préproduction. L'APK n'est pas versionné. Un Android App Bundle exige la clé de signature de l'institution et n'a pas été produit. Non installé sur un appareil physique.
 
 ## Non exécuté
 
